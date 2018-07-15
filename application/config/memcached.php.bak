@@ -1,0 +1,33 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/*
+| -------------------------------------------------------------------------
+| Memcached settings
+| -------------------------------------------------------------------------
+| Your Memcached servers can be specified below.
+|
+|	See: https://codeigniter.com/user_guide/libraries/caching.html#memcached
+|
+*/
+// $config = array(
+// 	'default' => array(
+// 		'hostname' => '127.0.0.1',
+// 		'port'     => '11211',
+// 		'weight'   => '1',
+// 	),
+// );
+
+$config = array(
+		'nirvana2' => array(
+				'hostname' => 'fdaymemcached.my2ymd.0001.cnn1.cache.amazonaws.com.cn',
+				'port'     => '11211',
+				'weight'   => '1',
+		),
+		//以下缓存地址及端口主要用于api_gateway中的session; 临时给citybox 的access_token做缓存用
+		'nirvana3' => array(
+				'hostname' => 'api-gateway-memcache.my2ymd.0001.cnn1.cache.amazonaws.com.cn',
+				'port'     => '11211',
+				'weight'   => '1',
+		),
+);

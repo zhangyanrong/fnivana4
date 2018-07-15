@@ -1,0 +1,8 @@
+{
+  "name": "天天果园服务自动api文档",
+  "version": "3.0.0",
+  "description": "APIGATEWAY v1_0",
+  "title": "天天果园自动API文档",
+  "url" : "http://api.guantest.fruitday.com/api",
+  "sampleUrl": "http://api.guantest.fruitday.com"
+}

@@ -1,0 +1,44 @@
+<?php
+//本地测试用
+$service['local']['api_gateway']	= 'api.fruitday.com';
+$service['local']['product']		= 'caiyunchen.product.guantest.fruitday.com';
+$service['local']['order']			= 'api.order.fruitday.com';
+$service['local']['user']			= 'api.user.fruitday.com';
+$service['local']['cart']			= 'caiyunchen.cart.guantest.fruitday.com';
+
+//测试机上用
+$service['test']['api_gateway']		= 'api.guantest.fruitday.com';
+$service['test']['product']			= 'caiyunchen.product.guantest.fruitday.com';
+$service['test']['order']			= 'api.order.guantest.fruitday.com';
+$service['test']['user']			= 'api.user.guantest.fruitday.com';
+$service['test']['cart']			= 'caiyunchen.cart.guantest.fruitday.com';
+
+//staging用
+$service['staging']['api_gateway']	= 'stagingnirvana3.fruitday.com';
+$service['staging']['product']		= 'stagingserviceproduct.fruitday.com';
+$service['staging']['order']		= 'stagingserviceorder.fruitday.com';
+$service['staging']['user']			= 'stagingserviceuser.fruitday.com';
+$service['staging']['cart']			= 'stagingservicecart.fruitday.com';
+$service['staging']['nirvana']		= 'stagingnirvana.fruitday.com';//@TODO
+$service['staging']['nirvana2']		= 'stagingnirvana2.fruitday.com';//@TODO
+$service['staging']['citybox']		= 'stagingcityboxapi.fruitday.com';//@TODO
+$service['staging']['pay']			= 'https://stagingpay.fruitday.com';
+
+//正式环境用
+$service['production']['api_gateway']	= 'nirvana3.fruitday.com';
+$service['production']['product']		= 'internal-service-product-inner-1147245839.cn-north-1.elb.amazonaws.com.cn';
+$service['production']['order']			= 'internal-service-order-inner-1515377583.cn-north-1.elb.amazonaws.com.cn';
+$service['production']['user']			= 'internal-service-user-inner-565898489.cn-north-1.elb.amazonaws.com.cn';
+$service['production']['cart']			= 'internal-service-cart-inner-350915296.cn-north-1.elb.amazonaws.com.cn';
+$service['production']['citybox']		= 'cityboxapi.fruitday.com';
+$service['production']['banner']		= 'internal-service-banner-inner-1697162686.cn-north-1.elb.amazonaws.com.cn';
+$service['production']['rpc']			= 'ip-10-0-0-187.cn-north-1.compute.internal';
+$service['production']['nirvana']		= 'https://nirvana.fruitday.com';//@TODO
+$service['production']['nirvana2']		= 'https://nirvana2.fruitday.com';//@TODO
+$service['production']['citybox']		= 'cityboxapi.fruitday.com';
+$service['production']['pay']			= 'https://pay.fruitday.com';
+
+
+
+//这里负责配置的切换;	local:本地测试用;test:测试机上用;staging:预生产环境用;production:生产环境用
+$config['service'] = $service['production'];

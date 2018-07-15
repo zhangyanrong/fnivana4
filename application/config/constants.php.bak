@@ -1,0 +1,129 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/*
+|--------------------------------------------------------------------------
+| Display Debug backtrace
+|--------------------------------------------------------------------------
+|
+| If set to TRUE, a backtrace will be displayed along with php errors. If
+| error_reporting is disabled, the backtrace will not display, regardless
+| of this setting
+|
+*/
+defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE);
+
+/*
+|--------------------------------------------------------------------------
+| File and Directory Modes
+|--------------------------------------------------------------------------
+|
+| These prefs are used when checking and setting modes when working
+| with the file system.  The defaults are fine on servers with proper
+| security, but you may wish (or even need) to change the values in
+| certain environments (Apache running a separate process for each
+| user, PHP under CGI with Apache suEXEC, etc.).  Octal values should
+| always be used to set the mode correctly.
+|
+*/
+defined('FILE_READ_MODE')  OR define('FILE_READ_MODE', 0644);
+defined('FILE_WRITE_MODE') OR define('FILE_WRITE_MODE', 0666);
+defined('DIR_READ_MODE')   OR define('DIR_READ_MODE', 0755);
+defined('DIR_WRITE_MODE')  OR define('DIR_WRITE_MODE', 0755);
+
+/*
+|--------------------------------------------------------------------------
+| File Stream Modes
+|--------------------------------------------------------------------------
+|
+| These modes are used when working with fopen()/popen()
+|
+*/
+defined('FOPEN_READ')                           OR define('FOPEN_READ', 'rb');
+defined('FOPEN_READ_WRITE')                     OR define('FOPEN_READ_WRITE', 'r+b');
+defined('FOPEN_WRITE_CREATE_DESTRUCTIVE')       OR define('FOPEN_WRITE_CREATE_DESTRUCTIVE', 'wb'); // truncates existing file data, use with care
+defined('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE')  OR define('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE', 'w+b'); // truncates existing file data, use with care
+defined('FOPEN_WRITE_CREATE')                   OR define('FOPEN_WRITE_CREATE', 'ab');
+defined('FOPEN_READ_WRITE_CREATE')              OR define('FOPEN_READ_WRITE_CREATE', 'a+b');
+defined('FOPEN_WRITE_CREATE_STRICT')            OR define('FOPEN_WRITE_CREATE_STRICT', 'xb');
+defined('FOPEN_READ_WRITE_CREATE_STRICT')       OR define('FOPEN_READ_WRITE_CREATE_STRICT', 'x+b');
+
+/*
+|--------------------------------------------------------------------------
+| Exit Status Codes
+|--------------------------------------------------------------------------
+|
+| Used to indicate the conditions under which the script is exit()ing.
+| While there is no universal standard for error codes, there are some
+| broad conventions.  Three such conventions are mentioned below, for
+| those who wish to make use of them.  The CodeIgniter defaults were
+| chosen for the least overlap with these conventions, while still
+| leaving room for others to be defined in future versions and user
+| applications.
+|
+| The three main conventions used for determining exit status codes
+| are as follows:
+|
+|    Standard C/C++ Library (stdlibc):
+|       http://www.gnu.org/software/libc/manual/html_node/Exit-Status.html
+|       (This link also contains other GNU-specific conventions)
+|    BSD sysexits.h:
+|       http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
+|    Bash scripting:
+|       http://tldp.org/LDP/abs/html/exitcodes.html
+|
+*/
+defined('EXIT_SUCCESS')        OR define('EXIT_SUCCESS', 0); // no errors
+defined('EXIT_ERROR')          OR define('EXIT_ERROR', 1); // generic error
+defined('EXIT_CONFIG')         OR define('EXIT_CONFIG', 3); // configuration error
+defined('EXIT_UNKNOWN_FILE')   OR define('EXIT_UNKNOWN_FILE', 4); // file not found
+defined('EXIT_UNKNOWN_CLASS')  OR define('EXIT_UNKNOWN_CLASS', 5); // unknown class
+defined('EXIT_UNKNOWN_METHOD') OR define('EXIT_UNKNOWN_METHOD', 6); // unknown class member
+defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user input
+defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
+defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
+defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+
+//本站地址
+defined('SITE_URL') OR define('SITE_URL', 'nirvana3.fruitday.com');
+
+defined('SPA_SITE_URL') OR define('SPA_SITE_URL', 'http://spa.fruitay.com');
+
+//秘钥部分
+defined('API_SECRET') OR define('API_SECRET', 'caa21c26dfc990c7a534425ec87a111c');
+defined('PRO_SECRET') OR define('PRO_SECRET', 'ee4a5e81f08d491987567104zec97737');
+defined('POS_SECRET') OR define('POS_SECRET', 'cq5xbqewu3jml82byixi85jp72zkbguc');
+define('O2O_SECRET','3ca59a237313bdad9244145641244946');
+define('CRM_SECRET', '56b44d6cd9b7f902ef36f1f0c1dac79f');
+define('CRM_DATA_SECRET', 'KJKL234NLJ32LKJL');
+define('SMS_SECRET','3410w312ecf4a3j814y50b6abff6f6b97e16');
+//其他
+defined('LOG_PATH') OR define('LOG_PATH', '/mnt/logs/nginx');//@TODO
+// defined('LOG_PATH') OR define('LOG_PATH', 'C:\work\workspace\service_apigateway\application\logs');//@TODO
+
+defined('CITYBOX_SECRET') OR define('CITYBOX_SECRET','bdp2dn8echrstqab1aicd7gkau6w3d40');
+defined('CITYBOX_CRYPT_SECRET') OR define('CITYBOX_CRYPT_SECRET','xzghxf7zscjjuoxvdza5vmp6xbhg1zprrvxubffpat4715a3i3a0wyzzgxf1d0e8');
+//头像url部分
+defined('PIC_URL') OR define('PIC_URL',"http://cdn.fruitday.com");
+defined('PIC_URL_TMP') OR define('PIC_URL_TMP',"http://apicdn.fruitday.com/img/");
+
+defined('POOL_O2O_AES_KEY')     or define('POOL_O2O_AES_KEY', 'SNwtRw68U23J0m4784frWAd3H3JpAmkn7pty/JLsrPc=');
+defined('POOL_O2O_APPID')       or define('POOL_O2O_APPID', '00000000001');
+defined('POOL_O2O_VERSION')     or define('POOL_O2O_VERSION', '1.0');
+defined('POOL_O2O_SECRET')      or define('POOL_O2O_SECRET', 'a03a1553fbb9f7c80fe43d9836c8564a');
+defined('POOL_O2O_OMS_APPID')   or define('POOL_O2O_OMS_APPID', '00000000001');
+defined('POOL_O2O_OMS_VERSION') or define('POOL_O2O_OMS_VERSION', '1.0');
+defined('POOL_O2O_OMS_SECRET')  or define('POOL_O2O_OMS_SECRET', 'secretkey');
+defined('RBAC_SECRET') OR define('RBAC_SECRET', 'ee4a5e81f08d491987567104zec97737');
+
+defined('POOL_O2O_TMS_SECRET')  or define('POOL_O2O_TMS_SECRET', 'lkjflkdjsalfjdlsajflkjdsaf');
+defined('POOL_O2O_TMS_APPKEY')   or define('POOL_O2O_TMS_APPKEY', 'ios01');
+defined('POOL_O2O_TMS_VERSION') or define('POOL_O2O_TMS_VERSION', '1.0');
+
+defined('PAY_SECRET') OR define('PAY_SECRET', 'afsvq2mqwc7j0i69uzvukqexrzd1jq6h');
+
+defined('WXAPP_APPID') OR define('WXAPP_APPID', 'wx435c0f188b8e3283');//微信用
+defined('WXAPP_SECRET') OR define('WXAPP_SECRET', 'b8c403246b71b7898d873c08fc6ef155');//微信用
+
+defined('CITYBOX_APP_ID') OR define('CITYBOX_APP_ID', 'fruitday');
